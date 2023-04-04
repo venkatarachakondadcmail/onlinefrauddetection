@@ -1,4 +1,3 @@
-import json
 import requests
 import streamlit as st
 st.set_page_config(layout="wide")
@@ -94,10 +93,10 @@ with st.expander("See explanation"):
 
         st.write("""## **Prediction**""")
 
-        # inference from ml api
-        res = requests.post("http://localhost:8000/prediction", json= data)
-        json_str = json.dumps(res.json())
-        respon = json.loads(json_str)
+        # # inference from ml api
+        # res = requests.post("http://localhost:8000/prediction", json= data)
+        # json_str = json.dumps(res.json())
+        # respon = json.loads(json_str)
 
         if sender_name=='' or receiver_name == '':
             st.write("Error! Please input Transaction ID or Names of Sender and Receiver!")
